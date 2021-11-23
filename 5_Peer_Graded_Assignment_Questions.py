@@ -335,7 +335,7 @@ app.layout = html.Div(children=[
                                                      style={'width':'80%', 'padding':'3px', 'font-size': '20px', 'text-align-last' : 'center'}),
                                             # Place them next to each other using the division style
                                             ], style={'display': 'flex'}), 
-                                        ],            
+                                        ]),            
                                 
                                 # Add Computed graphs
                                 # REVIEW3: Observe how we add an empty division and providing an id that will be updated during callback
@@ -352,7 +352,7 @@ app.layout = html.Div(children=[
                                             html.Div([ ], id='plot5')
                                    ], style={'display': 'flex'}),
 
-                            )]
+                            ])
 
 # Callback function definition
 # TODO4: Add 5 ouput components
@@ -440,7 +440,7 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
 # Run the app
 if __name__ == '__main__':
     # REVIEW8: Adding dev_tools_ui=False, dev_tools_props_check=False can prevent error appearing before calling callback function
-    app.run_server(mode="inline", host="localhost", debug=False, dev_tools_ui=False, dev_tools_props_check=False)
+    app.run_server()
 
 
 # ## Summary
